@@ -18,6 +18,10 @@ class Stack {
     this.count++
   }
 
+  get peek() {
+    return this.storage[this.count - 1]
+  }
+
   get size() {
     return this.count
   }
