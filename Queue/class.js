@@ -46,7 +46,7 @@ class PriorityQueue {
   }
 
   printCollection() {
-    (console.log(this.collection));
+    (console.log(this.collection))
   }
   
   enqueue(element){
@@ -56,9 +56,9 @@ class PriorityQueue {
         let added = false;
         for (let i=0; i<this.collection.length; i++){
           if (element[1] < this.collection[i][1]) { //checking priorities
-            this.collection.splice(i,0,element);
-            added = true;
-            break;
+            this.collection.splice(i,0,element)
+            added = true
+            break
           }
         }
         if (!added){
