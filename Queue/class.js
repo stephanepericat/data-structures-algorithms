@@ -26,18 +26,18 @@ class Queue {
   }
 
   isEmpty() {
-      return (this.collection.length === 0);
+      return (this.collection.length === 0)
   }
 }
 
-var q = new Queue(); 
-q.enqueue('a'); 
-q.enqueue('b');
-q.enqueue('c');
-q.print();
-q.dequeue();
-console.log(q.front());
-q.print();
+var q = new Queue() 
+q.enqueue('a') 
+q.enqueue('b')
+q.enqueue('c')
+q.print()
+q.dequeue()
+console.log(q.front())
+q.print()
 
 
 class PriorityQueue {
@@ -51,9 +51,9 @@ class PriorityQueue {
   
   enqueue(element){
       if (this.isEmpty()){ 
-          this.collection.push(element);
+          this.collection.push(element)
       } else {
-        let added = false;
+        let added = false
         for (let i=0; i<this.collection.length; i++){
           if (element[1] < this.collection[i][1]) { //checking priorities
             this.collection.splice(i,0,element)
@@ -82,15 +82,15 @@ class PriorityQueue {
   
   isEmpty() {
       return (this.collection.length === 0)
-  };
+  }
 }
 
-var pq = new PriorityQueue(); 
-pq.enqueue(['Beau Carnes', 2]); 
-pq.enqueue(['Quincy Larson', 3]);
+var pq = new PriorityQueue() 
+pq.enqueue(['Beau Carnes', 2]) 
+pq.enqueue(['Quincy Larson', 3])
 pq.enqueue(['Ewa Mitulska-Wójcik', 1])
 pq.enqueue(['Briana Swift', 2])
-pq.printCollection();
-pq.dequeue();
-console.log(pq.front());
-pq.printCollection();
+pq.printCollection()
+pq.dequeue()
+console.log(pq.front())
+pq.printCollection()
